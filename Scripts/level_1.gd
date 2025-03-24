@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var anim = $AnimationPlayer
 
-
+lkgllglkhl
 func _ready():
 	Music.stop()
 	animation()
