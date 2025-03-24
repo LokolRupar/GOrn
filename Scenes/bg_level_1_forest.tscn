@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmct7ahaqdbqv"]
+
+[ext_resource type="Texture2D" uid="uid://dftabsq8ryoni" path="res://BG/FirstPrologue/Background.png" id="1_hbkyq"]
+[ext_resource type="Script" path="res://Scripts/bg_level_1_forest.gd" id="1_uc05g"]
+[ext_resource type="Texture2D" uid="uid://cyo6hr6yvxbh0" path="res://BG/FirstPrologue/Middleground.png" id="2_ornbo"]
+
+[node name="BGLevel1_Forest" type="ParallaxBackground"]
+script = ExtResource("1_uc05g")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(981.93, 0)
+
+[node name="Background" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(507, 300)
+scale = Vector2(2.59896, 2.76389)
+texture = ExtResource("1_hbkyq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(981.93, 0)
+
+[node name="Middleground" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(502, 297)
+scale = Vector2(2.60156, 2.78241)
+texture = ExtResource("2_ornbo")

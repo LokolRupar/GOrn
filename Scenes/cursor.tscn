@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5sdhhhr0ybc2"]
+
+[ext_resource type="Script" path="res://Scripts/Cursor.gd" id="1_kjxlk"]
+[ext_resource type="Texture2D" uid="uid://dsh8js0ldni60" path="res://Decorations/SeparateTextures/cursor_default.png" id="2_eu72x"]
+[ext_resource type="Texture2D" uid="uid://b4a21v0v1eso4" path="res://Decorations/circle.png" id="3_tcroa"]
+
+[node name="Cursor" type="CanvasLayer"]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+script = ExtResource("1_kjxlk")
+
+[node name="CursorDefault" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_eu72x")
+
+[node name="PointLight2D" type="PointLight2D" parent="CursorDefault"]
+position = Vector2(-3.8147e-06, 0.999992)
+scale = Vector2(0.56534, 0.421026)
+energy = 1.5
+range_layer_min = -1
+range_layer_max = 1
+texture = ExtResource("3_tcroa")
+texture_scale = 0.5

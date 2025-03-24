@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://u4fd02udy62c"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kqtd3"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1000, 1, 1)
+direction = Vector3(-1, 1, 0)
+spread = 20.0
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+
+[node name="Rain" type="GPUParticles2D"]
+modulate = Color(0, 0, 0.568627, 1)
+position = Vector2(435, 19)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_kqtd3")
+lifetime = 3.0

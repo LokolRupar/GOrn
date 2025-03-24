@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxp8vnmm0v75a"]
+
+[ext_resource type="Texture2D" uid="uid://bdra2v25fa0o2" path="res://BG/Menu_Tutorial/1.png" id="1_excut"]
+[ext_resource type="Script" path="res://Scripts/bg.gd" id="1_ftshs"]
+[ext_resource type="Texture2D" uid="uid://b7shmd3rwb663" path="res://BG/Menu_Tutorial/2.png" id="2_xtgch"]
+[ext_resource type="Texture2D" uid="uid://bfb2a5806126o" path="res://BG/Menu_Tutorial/3.png" id="3_x166k"]
+[ext_resource type="Texture2D" uid="uid://ck8x54emnq7dm" path="res://BG/Menu_Tutorial/4.png" id="4_hue3s"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_ftshs")
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Blue" type="Sprite2D" parent="Sky"]
+position = Vector2(500, 452.2)
+scale = Vector2(3.67647, 5.65)
+texture = ExtResource("1_excut")
+metadata/_edit_lock_ = true
+
+[node name="Clouds1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sky1" type="Sprite2D" parent="Clouds1"]
+position = Vector2(155, 251)
+texture = ExtResource("2_xtgch")
+
+[node name="Clouds2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sky2" type="Sprite2D" parent="Clouds2"]
+position = Vector2(542, 206)
+texture = ExtResource("2_xtgch")
+
+[node name="Clouds3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sky3" type="Sprite2D" parent="Clouds3"]
+position = Vector2(819, 125)
+texture = ExtResource("2_xtgch")
+
+[node name="WhiteMount" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Mount" type="Sprite2D" parent="WhiteMount"]
+position = Vector2(502.5, 322)
+scale = Vector2(3.66544, 3.4375)
+texture = ExtResource("3_x166k")
+metadata/_edit_lock_ = true
+
+[node name="GreenMount" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Mount2" type="Sprite2D" parent="GreenMount"]
+position = Vector2(500, 277)
+scale = Vector2(3.67647, 4.1)
+texture = ExtResource("4_hue3s")
+metadata/_edit_lock_ = true

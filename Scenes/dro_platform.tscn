@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://3ll6b27y2x7a"]
+
+[ext_resource type="Texture2D" uid="uid://dbkuqudimtyxs" path="res://Decorations/SeparateTextures/DropPlatform.png" id="1_bfppe"]
+[ext_resource type="Script" path="res://Scripts/dro_platform.gd" id="1_l00bd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ad0s6"]
+size = Vector2(106, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1rge"]
+size = Vector2(106, 18)
+
+[node name="DroPlatform" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_l00bd")
+
+[node name="Platform" type="Sprite2D" parent="."]
+texture = ExtResource("1_bfppe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_ad0s6")
+one_way_collision = true
+
+[node name="DetectPlayer" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectPlayer"]
+position = Vector2(-3, -6)
+shape = SubResource("RectangleShape2D_n1rge")
+
+[connection signal="body_entered" from="DetectPlayer" to="." method="_on_detect_player_body_entered"]
+[connection signal="body_exited" from="DetectPlayer" to="." method="_on_detect_player_body_exited"]

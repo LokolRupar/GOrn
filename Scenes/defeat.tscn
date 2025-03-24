@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cueekuoqfi6cv"]
+
+[ext_resource type="Script" path="res://Scripts/Defeat.gd" id="1_sykt3"]
+
+[node name="Defeat" type="Node2D"]
+script = ExtResource("1_sykt3")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 399.0
+offset_top = 230.0
+offset_right = 725.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "YOU DIE"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
